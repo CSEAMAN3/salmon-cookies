@@ -1,9 +1,14 @@
 html {
   scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
-  --w: #f8f8f8;
+  --grape: #94618e;
+  --eggplant: #492741;
+  --sand: #f4decb;
+  --shell: #f8eee7;
+  --biscuit: #f3e7d7;
 }
 
 * {
@@ -22,4 +27,72 @@ html {
 
 body {
   min-width: 320px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  color: var(--eggplant);
 }
+
+/*************************
+IMAGES
+**************************/
+
+#header-logo-img {
+  width: 200px;
+}
+
+/*************************
+TYPOGRAPHY
+**************************/
+
+/* sales.html Typography Styles */
+
+.sales-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/*************************
+LAYOUT
+**************************/
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+.header-container,
+.main-container,
+.footer-container {
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--grape);
+  padding: 0em 0;
+}
+
+main {
+  background-color: var(--shell);
+  min-height: 1000px;
+  padding: 1em 0;
+}
+
+footer {
+  background-color: var(--eggplant);
+  padding: 1em 0;
+}
+
+/* Sales.html layout Styles */
+
+.sales-container {
+  margin-bottom: 1em;
+}
+
+/*************************
+MEDIA QUERIES
+**************************/
