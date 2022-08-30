@@ -11,25 +11,54 @@
     />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/4d353b9c2f.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Aladin&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <header>
       <div class="header-container">
-        <img
-          id="header-logo-img"
-          src="images/salmon-cookie-eggplant.svg"
-          alt="logo"
-        />
+        <div class="logo-container">
+          <img
+            id="header-logo-img"
+            src="images/salmon-cookie-logo-eggplant.svg"
+            alt="logo"
+          />
+        </div>
+        <div class="hamburger-menu">
+          <input id="menu-toggle" type="checkbox" />
+          <label class="menu-btn" for="menu-toggle"><span></span></label>
+          <ul class="menu-box">
+            <li><a class="menu-item" href="#">About</a></li>
+            <li><a class="menu-item" href="#">Giant cookies</a></li>
+            <li><a class="menu-item" href="#">Cookie boxes</a></li>
+            <li><a class="menu-item" href="#">Gifts</a></li>
+            <li><a class="menu-item" href="#">Opening Hours</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
       <div class="main-container"></div>
+      <!-- <img
+        src="/images/cookies.jpg"
+        alt="cookies"
+        srcset="
+          /images/cookies.jpg    500w,
+          /images/cookies2x.jpg 1000w,
+          /images/cookies3x.jpg 1500w
+        "
+      /> -->
+      <h1 class="hero-heading">
+        so delicious <span class="heading-break">you'll be hooked</span>
+      </h1>
     </main>
     <footer>
       <div class="footer-container"></div>
