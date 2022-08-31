@@ -157,7 +157,12 @@ TYPOGRAPHY
 
 /* sales.html Typography Styles */
 
-.sales-heading {
+.sales-title {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+/* .seattleSales-container {
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 700;
@@ -169,7 +174,7 @@ TYPOGRAPHY
 
 .salesList li:last-of-type {
   font-weight: 700;
-}
+} */
 
 /*************************
 LAYOUT
@@ -192,7 +197,7 @@ footer {
 header {
   background-color: var(--grape);
   padding: 1em 0;
-  position: fixed;
+  /* position: fixed; */
   z-index: 1;
 }
 
@@ -214,10 +219,9 @@ footer {
 
 /* Sales.html layout Styles */
 
-.sales-container {
+.country-container {
   margin-bottom: 1em;
 }
-
 /*************************
 MEDIA QUERIES
 **************************/
