@@ -59,10 +59,24 @@ IMAGES
   width: 100px;
 }
 
+/* .cookie-rv-img-container {
+} */
+
+#cookie-std-img,
+#cookie-rv-img {
+  max-width: 350px;
+}
+
+#cookie-rv-img {
+  display: none;
+}
+
 /*************************
 HAMBURGER MENU
 **************************/
-
+.hamburger-menu {
+  z-index: 100;
+}
 #menu-toggle {
   opacity: 0;
 }
@@ -146,13 +160,34 @@ TYPOGRAPHY
 
 .hero-heading {
   text-transform: capitalize;
-  font-family: "Aladin", cursive;
-  font-size: 2rem;
-  color: var(--eggplant);
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--biscuit);
+  margin-bottom: 2rem;
 }
 
 .heading-break {
   display: block;
+}
+
+#range-btn {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--biscuit);
+  padding: 0.5em 1em;
+  border: 2px solid var(--biscuit);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  transition: all 0.25s ease;
+}
+
+#range-btn:hover {
+  border-color: var(--eggplant);
+  color: var(--eggplant);
 }
 
 /* sales.html Typography Styles */
@@ -198,12 +233,44 @@ header {
   background-color: var(--grape);
   padding: 1em 0;
   /* position: fixed; */
-  z-index: 1;
 }
 
 main {
-  min-height: 800px;
   background-color: var(--grape);
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+main::after {
+  content: "";
+  width: 100vw;
+  height: 0;
+  /* border-top: 25px solid transparent;
+  border-right: 100vw solid var(--grape);
+  border-bottom: 25px solid transparent;
+  position: absolute;
+  bottom: -25px; */
+  border-top: 50px solid var(--grape);
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  position: absolute;
+  bottom: -50px;
+}
+
+.main-container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.content-container {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 footer {
@@ -217,11 +284,127 @@ footer {
   align-items: center;
 }
 
+#article-about {
+  min-height: 300px;
+  background-color: var(--biscuit);
+}
+
 /* Sales.html layout Styles */
 
 .country-container {
   margin-bottom: 1em;
 }
+
+.sales-main-container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+label,
+input {
+  margin-bottom: 1rem;
+}
+
+.form-container {
+  margin-top: 3rem;
+}
+
+fieldset {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#submit-btn {
+  min-width: 200px;
+  cursor: pointer;
+}
+
+/*************************
+TABLE
+**************************/
+
+.table-container {
+  overflow-x: scroll;
+}
+
+table th,
+table td {
+  padding: 0.5em;
+  text-align: center;
+  border: 1px solid var(--eggplant);
+}
+
+table th {
+  font-weight: 700;
+}
+
 /*************************
 MEDIA QUERIES
 **************************/
+
+@media (min-width: 740px) {
+  /**** GENERIC ****/
+
+  /**** IMAGES ****/
+
+  .cookie-rv-img-container {
+    width: 30%;
+  }
+
+  .cookie-std-img-container {
+    width: 30%;
+  }
+
+  #cookie-rv-img {
+    display: block;
+    width: 100%;
+  }
+
+  #cookie-std-img {
+    width: 100%;
+  }
+
+  /**** HAMBURGER MENU ****/
+
+  /**** TYPOGRAPHY ****/
+
+  /**** LAYOUT ****/
+
+  .main-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .content-container {
+    width: 30%;
+  }
+
+  /**** TABLE ****/
+}
+
+@media (min-width: 900px) {
+  /**** GENERIC ****/
+
+  /**** IMAGES ****/
+
+  /**** HAMBURGER MENU ****/
+
+  /**** TYPOGRAPHY ****/
+
+  /**** LAYOUT ****/
+
+  /**** TABLE ****/
+}
+
+/**** GENERIC ****/
+
+/**** IMAGES ****/
+
+/**** HAMBURGER MENU ****/
+
+/**** TYPOGRAPHY ****/
+
+/**** LAYOUT ****/
+
+/**** TABLE ****/

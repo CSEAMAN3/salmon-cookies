@@ -147,6 +147,7 @@ const dubia = {
         this.customerEachHour[i] * this.avgCookiesPerSale
       );
       this.cookiesEachHour.push(oneHour);
+      this.totalDailyCookies += oneHour;
     }
   },
   render: function () {
@@ -197,6 +198,7 @@ const paris = {
         this.customerEachHour[i] * this.avgCookiesPerSale
       );
       this.cookiesEachHour.push(oneHour);
+      this.totalDailyCookies += oneHour;
     }
   },
   render: function () {
@@ -247,6 +249,7 @@ const lima = {
         this.customerEachHour[i] * this.avgCookiesPerSale
       );
       this.cookiesEachHour.push(oneHour);
+      this.totalDailyCookies += oneHour;
     }
   },
   render: function () {

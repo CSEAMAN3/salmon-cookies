@@ -42,14 +42,42 @@
       </div>
     </header>
     <main>
-      <div class="main-container">
-        <div id="sales-container"></div>
+      <div class="sales-main-container">
+        <div class="table-container">
+          <table id="cookie-data"></table>
+        </div>
+        <div class="form-container">
+          <form id="cookie-form" action="">
+            <fieldset>
+              <legend>Cookie Store Form</legend>
+              <div class="name-input">
+                <label for="name">Store name</label>
+                <input name="name" type="text" id="name" />
+              </div>
+              <div class="minCust-input">
+                <label for="min-cust">Minimum Customers</label>
+                <input name="minCust" type="text" id="min-cust" />
+              </div>
+              <div class="maxCust-input">
+                <label for="max-cust">Maximum Customers</label>
+                <input name="maxCust" type="text" id="max-cust" />
+              </div>
+              <div class="average-input">
+                <label for="average">Average Cookies Sold</label>
+                <input name="average" type="text" id="average" />
+              </div>
+              <button id="submit-btn" type="submit">Submit</button>
+            </fieldset>
+          </form>
+        </div>
       </div>
     </main>
     <footer>
       <div class="footer-container"></div>
     </footer>
     <!-- <script src="app.js"></script> -->
-    <script src="sales.js"></script>
+    <!-- <script src="sales.js"></script> -->
+    <!-- <script src="construct.js"></script> -->
+    <script src="table.js"></script>
   </body>
 </html>
