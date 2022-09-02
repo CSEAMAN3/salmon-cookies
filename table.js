@@ -170,6 +170,7 @@ cookieForm.addEventListener("submit", function (event) {
   newStore.render();
   // rerender the total row
   renderTotals();
+  // reset input values
   document.getElementById("name").value = "";
   document.getElementById("min-cust").value = "";
   document.getElementById("max-cust").value = "";
