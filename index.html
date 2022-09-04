@@ -21,26 +21,64 @@
       href="https://fonts.googleapis.com/css2?family=Aladin&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/4d353b9c2f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <div class="header-container">
         <div class="logo-container">
-          <img
-            id="header-logo-img"
-            src="images/salmon-cookie-logo-eggplant.svg"
-            alt="logo"
-          />
+          <a href="index.html">
+            <img
+              id="header-logo-img"
+              src="./images/salmon-cookie-logo-eggplant.svg"
+              alt="logo"
+            />
+          </a>
         </div>
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-list-item">
+              <a class="header-nav-link" href="#">about</a>
+            </li>
+            <li class="header-nav-list-item">
+              <a class="header-nav-link" href="#">opening hours</a>
+            </li>
+            <li class="header-nav-list-item">
+              <a class="header-nav-link" href="#">contact</a>
+            </li>
+            <li class="header-nav-list-item">
+              <a class="header-nav-link" href="sales.html"
+                ><i class="fa-solid fa-user"></i>login</a
+              >
+            </li>
+          </ul>
+        </nav>
         <div class="hamburger-menu">
           <input id="menu-toggle" type="checkbox" />
           <label class="menu-btn" for="menu-toggle"><span></span></label>
           <ul class="menu-box">
-            <li><a class="menu-item" href="#">About</a></li>
-            <li><a class="menu-item" href="#">Giant cookies</a></li>
-            <li><a class="menu-item" href="#">Cookie boxes</a></li>
-            <li><a class="menu-item" href="#">Gifts</a></li>
-            <li><a class="menu-item" href="#">Opening Hours</a></li>
+            <li><a class="menu-item" href="#">about</a></li>
+            <li><a class="menu-item" href="#">opening hours</a></li>
+            <li><a class="menu-item" href="#">contact</a></li>
+            <li><a class="menu-item" href="sales.html">login</a></li>
+            <li>
+              <a class="menu-item" href="#"
+                ><i class="fa-brands fa-square-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a class="menu-item" href="#"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a class="menu-item" href="#"
+                ><i class="fa-brands fa-square-twitter"></i
+              ></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -50,12 +88,12 @@
         <div class="cookie-rv-img-container">
           <img
             id="cookie-rv-img"
-            src="images/cookie-rv.png"
+            src="./images/cookie-rv.png"
             alt="cookies"
             srcset="
-              images/cookie-rv.png    500w,
-              images/cookie-rv2x.png 1000w,
-              images/cookie-rv3x.png 1500w
+              ./images/cookie-rv.png    500w,
+              ./images/cookie-rv2x.png 1000w,
+              ./images/cookie-rv3x.png 1500w
             "
           />
         </div>
@@ -68,35 +106,309 @@
         <div class="cookie-rv-img-container">
           <img
             id="cookie-std-img"
-            src="images/cookie-std.png"
+            src="./images/cookie-std.png"
             alt="cookie"
             srcset="
-            images/cookie-std.png    500w,
-            images/cookie-std2x.png 1000w,
-            images/cookie-std
-            3x.png 1500w
-          "
+              ./images/cookie-std.png    500w,
+              ./images/cookie-std2x.png 1000w,
+              ./images/cookie-std3x.png 1500w
+            "
           />
         </div>
       </div>
     </main>
     <article id="article-about">
-      <div class="article-container">
+      <div class="article-story-container">
         <h2 class="article-heading">the story so far...</h2>
         <p class="article-about-content">
           It all started when a young John Satoshi took his love for cookies and
           salmon one step to far! Today, with cookie stores in over five
           countries, the secret recipe of salmon cookies is enjoyed by millions.
+          <img
+            class="roller-img"
+            src="./images/roller.png"
+            alt="rolling pin drawing"
+            srcset="
+              ./images/roller.png    500w,
+              ./images/roller2x.png 1000w,
+              ./images/roller3x.png 1500w
+            "
+          />
         </p>
         <a id="story-btn" href="#">our story</a>
       </div>
     </article>
-    <article id="article-location"></article>
+    <article
+      id="article-location"
+      class="article-location article-location-visible"
+    >
+      <div class="article-location-container">
+        <h2 class="article-heading">Visit our stores...</h2>
+        <section class="section-location section-location-visible">
+          <div class="map-info-container">
+            <h3 id="map-title" class="map-title">seattle</h3>
+            <p id="article-address" class="article-address">
+              522 19th Ave E, Seattle, WA 98112
+            </p>
+            <div class="map-info-icon-container">
+              <i class="fa-solid fa-wheelchair"></i>
+              <i class="fa-solid fa-baby"></i>
+              <i class="fa-solid fa-restroom-simple"></i>
+              <i class="fa-solid fa-bag-shopping"></i>
+              <i class="fa-solid fa-car"></i>
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h4 class="article-open-hours-title">open hours</h4>
+            <p class="">monday - saturday: 6am - 8pm</p>
+            <p class="">sunday: closed</p>
+            <div class="location-buttons">
+              <button id="prev-btn" type="button">&lt;</button>
+              <div class="dot-btn">
+                <button
+                  class="location-btn location-btn-active"
+                  id="location-one-btn"
+                ></button>
+                <button class="location-btn" id="location-two-btn"></button>
+                <button class="location-btn" id="location-three-btn"></button>
+                <button class="location-btn" id="location-four-btn"></button>
+                <button class="location-btn" id="location-five-btn"></button>
+              </div>
+              <button id="next-btn" type="button">&gt;</button>
+            </div>
+          </div>
+          <div id="map-container" class="map-container">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172139.4161691142!2d-122.48214823951173!3d47.612943182362486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA%2C%20USA!5e0!3m2!1sen!2suk!4v1662191048792!5m2!1sen!2suk"
+              width="300"
+              height="260"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+        <!-- sections -->
+        <section class="section-location">
+          <div class="map-info-container">
+            <h3 id="map-title" class="map-title">Tokyo</h3>
+            <p id="article-address" class="article-address">
+              21-51 Honmachi, Shibuya City, Tokyo, 151 -0073 Japan
+            </p>
+            <div class="map-info-icon-container">
+              <i class="fa-solid fa-wheelchair"></i>
+              <i class="fa-solid fa-baby"></i>
+              <i class="fa-solid fa-restroom-simple"></i>
+              <i class="fa-solid fa-bag-shopping"></i>
+              <i class="fa-solid fa-car"></i>
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h4 class="article-open-hours-title">open hours</h4>
+            <p class="">monday - saturday: 6am - 8pm</p>
+            <p class="">sunday: closed</p>
+            <div class="location-buttons">
+              <button id="prev-btn" type="button">&lt;</button>
+              <div class="dot-btn">
+                <button
+                  class="location-btn location-btn-active"
+                  id="location-one-btn"
+                ></button>
+                <button class="location-btn" id="location-two-btn"></button>
+                <button class="location-btn" id="location-three-btn"></button>
+                <button class="location-btn" id="location-four-btn"></button>
+                <button class="location-btn" id="location-five-btn"></button>
+              </div>
+              <button id="next-btn" type="button">&gt;</button>
+            </div>
+          </div>
+          <div id="map-container" class="map-container">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51862.5914426259!2d139.6575964657253!3d35.66685693043186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cb2eb3108d1%3A0xf11cd9b2395b6677!2sShibuya%20City%2C%20Tokyo%2C%20Japan!5e0!3m2!1sen!2suk!4v1662222895118!5m2!1sen!2suk"
+              width="300"
+              height="260"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+
+        <section class="section-location">
+          <div class="map-info-container">
+            <h3 id="map-title" class="map-title">Dubia</h3>
+            <p id="article-address" class="article-address">
+              MOE 1st Floor - Dubia - United Arab Emirates
+            </p>
+            <div class="map-info-icon-container">
+              <i class="fa-solid fa-wheelchair"></i>
+              <i class="fa-solid fa-baby"></i>
+              <i class="fa-solid fa-restroom-simple"></i>
+              <i class="fa-solid fa-bag-shopping"></i>
+              <i class="fa-solid fa-car"></i>
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h4 class="article-open-hours-title">open hours</h4>
+            <p class="">monday - saturday: 6am - 8pm</p>
+            <p class="">sunday: closed</p>
+            <div class="location-buttons">
+              <button id="prev-btn" type="button">&lt;</button>
+              <div class="dot-btn">
+                <button
+                  class="location-btn location-btn-active"
+                  id="location-one-btn"
+                ></button>
+                <button class="location-btn" id="location-two-btn"></button>
+                <button class="location-btn" id="location-three-btn"></button>
+                <button class="location-btn" id="location-four-btn"></button>
+                <button class="location-btn" id="location-five-btn"></button>
+              </div>
+              <button id="next-btn" type="button">&gt;</button>
+            </div>
+          </div>
+          <div id="map-container" class="map-container">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d923304.2595069018!2d54.461994764223235!3d25.315716797778922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f5fede7964b%3A0x2a830aa19c1f6d89!2sSharjah%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2suk!4v1662223393527!5m2!1sen!2suk"
+              width="300"
+              height="260"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+
+        <section class="section-location">
+          <div class="map-info-container">
+            <h3 id="map-title" class="map-title">Paris</h3>
+            <p id="article-address" class="article-address">
+              38 Rue de Bretange, 75003 Paris, France
+            </p>
+            <div class="map-info-icon-container">
+              <i class="fa-solid fa-wheelchair"></i>
+              <i class="fa-solid fa-baby"></i>
+              <i class="fa-solid fa-restroom-simple"></i>
+              <i class="fa-solid fa-bag-shopping"></i>
+              <i class="fa-solid fa-car"></i>
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h4 class="article-open-hours-title">open hours</h4>
+            <p class="">monday - saturday: 6am - 8pm</p>
+            <p class="">sunday: closed</p>
+            <div class="location-buttons">
+              <button id="prev-btn" type="button">&lt;</button>
+              <div class="dot-btn">
+                <button
+                  class="location-btn location-btn-active"
+                  id="location-one-btn"
+                ></button>
+                <button class="location-btn" id="location-two-btn"></button>
+                <button class="location-btn" id="location-three-btn"></button>
+                <button class="location-btn" id="location-four-btn"></button>
+                <button class="location-btn" id="location-five-btn"></button>
+              </div>
+              <button id="next-btn" type="button">&gt;</button>
+            </div>
+          </div>
+          <div id="map-container" class="map-container">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d167998.121797302!2d2.206951465501067!3d48.85877000227553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sen!2suk!4v1662223706219!5m2!1sen!2suk"
+              width="300"
+              height="260"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+
+        <section class="section-location">
+          <div class="map-info-container">
+            <h3 id="map-title" class="map-title">Lima</h3>
+            <p id="article-address" class="article-address">
+              10 de Octobre, Villa Del Triunfo 07001, Peru
+            </p>
+            <div class="map-info-icon-container">
+              <i class="fa-solid fa-wheelchair"></i>
+              <i class="fa-solid fa-baby"></i>
+              <i class="fa-solid fa-restroom-simple"></i>
+              <i class="fa-solid fa-bag-shopping"></i>
+              <i class="fa-solid fa-car"></i>
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h4 class="article-open-hours-title">open hours</h4>
+            <p class="">monday - saturday: 6am - 8pm</p>
+            <p class="">sunday: closed</p>
+            <div class="location-buttons">
+              <button id="prev-btn" type="button">&lt;</button>
+              <div class="dot-btn">
+                <button
+                  class="location-btn location-btn-active"
+                  id="location-one-btn"
+                ></button>
+                <button class="location-btn" id="location-two-btn"></button>
+                <button class="location-btn" id="location-three-btn"></button>
+                <button class="location-btn" id="location-four-btn"></button>
+                <button class="location-btn" id="location-five-btn"></button>
+              </div>
+              <button id="next-btn" type="button">&gt;</button>
+            </div>
+          </div>
+          <div id="map-container" class="map-container">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499487.6353961515!2d-77.26797876579995!3d-12.026498672491064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f619ee3ec7%3A0x14206cb9cc452e4a!2sLima%2C%20Peru!5e0!3m2!1sen!2suk!4v1662223812693!5m2!1sen!2suk"
+              width="300"
+              height="260"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+        <!-- sections -->
+      </div>
+    </article>
+
     <article id="article-contact"></article>
     <footer>
-      <div class="footer-container"></div>
+      <div class="footer-container">
+        <div class="sign-up-container">
+          <h4 class="sign-up-title">stay in the loop</h4>
+          <p class="sign-up-content">
+            Sign up to Salmon Cookie emails and reel in exclusive offers, events
+            and competitions!
+          </p>
+          <div class="sign-up-email-container">
+            <form action="">
+              <input
+                id="email-input-el"
+                type="email"
+                placeholder="Cast your email address here"
+              />
+              <button id="email-btn"><i class="fa-solid fa-play"></i></button>
+            </form>
+          </div>
+          <a class="footer-social-icon" href="#"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a class="footer-social-icon" href="#"
+            ><i class="fa-brands fa-square-instagram"></i
+          ></a>
+          <a class="footer-social-icon" href="#"
+            ><i class="fa-brands fa-square-twitter"></i
+          ></a>
+        </div>
+      </div>
     </footer>
-
-    <script src="app.js"></script>
+    <script src="slide.js"></script>
+    <!-- <script src="table.js"></script> -->
   </body>
 </html>

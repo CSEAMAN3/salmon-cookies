@@ -176,3 +176,5 @@ cookieForm.addEventListener("submit", function (event) {
   document.getElementById("max-cust").value = "";
   document.getElementById("average").value = "";
 });
+
+// locations script

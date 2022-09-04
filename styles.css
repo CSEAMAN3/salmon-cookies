@@ -36,7 +36,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.01em;
-  line-height: 1.6;
+  /* line-height: 1.6; */
   color: var(--eggplant);
   background-color: var(--grape);
 }
@@ -49,6 +49,10 @@ h5,
 h6 {
   font-family: "Libre Baskerville", serif;
   font-weight: 700;
+}
+
+p {
+  line-height: 1.6;
 }
 
 /*************************
@@ -64,11 +68,55 @@ IMAGES
 
 #cookie-std-img,
 #cookie-rv-img {
-  max-width: 350px;
+  max-width: 300px;
 }
 
 #cookie-rv-img {
   display: none;
+}
+
+.roller-img {
+  width: 30px;
+  position: absolute;
+  transform: rotate(145deg);
+  left: -30px;
+  top: 10px;
+}
+
+/**************************
+location buttons
+****************************/
+
+.location-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#prev-btn,
+#next-btn {
+  font-family: inherit;
+  font-size: 3rem;
+  color: var(--eggplant);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.location-btn {
+  background-color: var(--eggplant);
+  width: 0.75rem;
+  height: 0.75rem;
+  border: none;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.location-btn-active {
+  opacity: 1;
 }
 
 /*************************
@@ -154,6 +202,11 @@ HAMBURGER MENU
   color: var(--shell);
 }
 
+.fa-brands {
+  font-size: 2rem;
+  margin-right: 1em;
+}
+
 /*************************
 TYPOGRAPHY
 **************************/
@@ -191,6 +244,11 @@ TYPOGRAPHY
   color: var(--eggplant);
 }
 
+#story-btn:hover {
+  border-color: var(--grape);
+  color: var(--grape);
+}
+
 #range-btn:hover {
   border-color: var(--eggplant);
   color: var(--eggplant);
@@ -202,9 +260,99 @@ TYPOGRAPHY
   margin-bottom: 0.5rem;
 }
 
+.article-location-container .article-heading {
+  margin-bottom: 1rem;
+}
+
 .article-about-content {
   margin-bottom: 1.5rem;
   max-width: 40ch;
+  position: relative;
+}
+
+.map-title {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.05em;
+  margin: 0.5rem 0 0.25rem 0;
+}
+
+.article-address {
+  max-width: 24ch;
+}
+
+.map-info-icon-container {
+  margin-bottom: 1.5rem;
+}
+
+.map-info-icon-container .fa-solid {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.map-info-icon-container .fa-solid:nth-child(2) {
+  margin-right: 0;
+}
+
+.article-open-hours-title {
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.25rem;
+}
+
+.sign-up-title {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: var(--biscuit);
+  margin-bottom: 0.5rem;
+}
+
+.sign-up-content {
+  max-width: 28ch;
+  color: var(--biscuit);
+  margin-bottom: 1rem;
+}
+
+#email-input-el {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+  line-height: 1.6;
+  color: var(--eggplant);
+  width: 28ch;
+  padding: 0.5em;
+  border: none;
+  border-radius: 2px 0 0 2px;
+}
+
+#email-btn {
+  width: 3rem;
+  height: 2.60156rem;
+  border: none;
+  border-radius: 0 2px 2px 0;
+  background-color: var(--biscuit);
+  cursor: pointer;
+  position: absolute;
+}
+
+.fa-play {
+  font-size: 1.3rem;
+  color: var(--eggplant);
+  transition: 0.25s color ease;
+}
+
+#email-btn:hover .fa-play {
+  color: var(--grape);
+}
+
+.footer-social-icon {
+  color: var(--biscuit);
+  transition: 0.25s color ease;
+}
+
+.footer-social-icon:hover {
+  color: var(--grape);
 }
 
 /* sales.html Typography Styles */
@@ -212,6 +360,10 @@ TYPOGRAPHY
 .sales-title {
   font-size: 1.5rem;
   text-transform: capitalize;
+}
+
+.article-address {
+  margin-bottom: 0.5rem;
 }
 
 /* .seattleSales-container {
@@ -252,6 +404,16 @@ header {
   /* position: fixed; */
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav {
+  display: none;
+}
+
 main {
   background-color: var(--grape);
   padding-bottom: 2rem;
@@ -290,25 +452,15 @@ main::after {
   margin-bottom: 3rem;
 }
 
-footer {
-  background-color: var(--grape);
-  padding: 1em 0;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 #article-about {
   min-height: 300px;
-  background-color: var(--biscuit);
+  /* background-color: var(--biscuit); */
+  background-image: linear-gradient(180deg, var(--biscuit), var(--shell));
   padding-top: 6rem;
   padding-bottom: 4rem;
 }
 
-.article-container {
+.article-story-container {
   width: 90%;
   max-width: 1024px;
   margin: 0 auto;
@@ -317,6 +469,49 @@ footer {
   align-items: center;
   text-align: center;
   /* margin: 0 auto; */
+}
+
+#article-location {
+  background-image: linear-gradient(180deg, var(--shell), var(--biscuit));
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+.article-location-container {
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.section-location,
+.section-location-hidden {
+  display: none;
+}
+
+.section-location-visible {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.map-container {
+  margin-bottom: 0.5rem;
+}
+
+.map {
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--eggplant);
+  padding: 3em 0;
+}
+
+.sign-up-email-container {
+  position: relative;
 }
 
 /* Sales.html layout Styles */
@@ -410,6 +605,16 @@ MEDIA QUERIES
     width: 30%;
   }
 
+  .section-location {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .map-container {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
   /**** TABLE ****/
 }
 
@@ -420,9 +625,39 @@ MEDIA QUERIES
 
   /**** HAMBURGER MENU ****/
 
+  .hamburger-menu {
+    display: none;
+  }
+
+  .header-nav-list-item {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
   /**** TYPOGRAPHY ****/
 
+  .header-nav-link {
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: var(--eggplant);
+    transition: 0.25s color ease;
+  }
+
+  .header-nav-link:hover {
+    color: var(--biscuit);
+  }
+
+  .fa-user {
+    margin-right: 0.3em;
+  }
+
   /**** LAYOUT ****/
+
+  .header-nav {
+    display: block;
+  }
 
   /**** TABLE ****/
 }
